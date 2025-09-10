@@ -11,7 +11,7 @@ const Game = ({ category, objective, list, setList }) => {
       </div>
 
       <div className='col-12 col-md-8'>
-        <div class='mb-3'>
+        <div className='mb-3'>
           Found {list.length} / {objective}
           {list.length / objective >= 1 && ' 🎉'}
         </div>

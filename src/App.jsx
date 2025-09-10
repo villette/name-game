@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { setTheme, getPreferredTheme } from './utils/theme';
 import Header from './Header';
 import Game from './Game';
 import NewGame from './NewGame';
@@ -8,6 +9,10 @@ const App = () => {
   const [category, setCategory] = useState(null);
   const [objective, setObjective] = useState(null);
   const [list, setList] = useState([]);
+
+  useEffect(() => {
+    setTheme(getPreferredTheme());
+  }, []);
 
   return (
     <div className='container'>
